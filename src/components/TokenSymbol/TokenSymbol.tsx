@@ -10,10 +10,15 @@ import tBondLogo from '../../assets/img/crypto_tomb_bond.svg';
 import tombFtmLpLogo from '../../assets/img/tomb_ftm_lp.png';
 import tshareFtmLpLogo from '../../assets/img/tshare_ftm_lp.png';
 
-import wftmLogo from '../../assets/img/ftm_logo_blue.svg';
+import wftmLogo from '../../assets/img/fantom-ftm-logo.png';
 import booLogo from '../../assets/img/spooky.png';
+import belugaLogo from '../../assets/img/BELUGA.png';
+import twoshareLogo from '../../assets/img/t_2SHARE-01.png';
+import twoombLogo from '../../assets/img/t_2OMB-01.png';
 import zooLogo from '../../assets/img/zoo_logo.svg';
 import shibaLogo from '../../assets/img/shiba_logo.svg';
+import bifiLogo from '../../assets/img/COW.svg';
+import mimLogo from '../../assets/img/mimlogopng.png';
 
 const logosBySymbol: { [title: string]: string } = {
   //Real tokens
@@ -27,6 +32,11 @@ const logosBySymbol: { [title: string]: string } = {
   BOO: booLogo,
   SHIBA: shibaLogo,
   ZOO: zooLogo,
+  BELUGA: belugaLogo,
+  BIFI: bifiLogo,
+  MIM: mimLogo,
+  '2OMB': twoombLogo,
+  '2SHARES': twoshareLogo,
   'TOMB-FTM-LP': tombFtmLpLogo,
   'TSHARE-FTM-LP': tshareFtmLpLogo,
 };

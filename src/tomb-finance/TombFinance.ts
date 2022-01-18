@@ -232,7 +232,7 @@ export class TombFinance {
     const depositTokenPrice = await this.getDepositTokenPriceInDollars(bank.depositTokenName, depositToken);
     const stakeInPool = await depositToken.balanceOf(bank.address);
     const TVL = Number(depositTokenPrice) * Number(getDisplayBalance(stakeInPool, depositToken.decimal));
-    const stat = bank.earnTokenName === 'TOMB' ? await this.getTombStat() : await this.getShareStat();
+    const stat = bank.earnTokenName === '3OMB' ? await this.getTombStat() : await this.getShareStat();
     const tokenPerSecond = await this.getTokenPerSecond(
       bank.earnTokenName,
       bank.contract,
@@ -268,17 +268,21 @@ export class TombFinance {
     poolContract: Contract,
     depositTokenName: string,
   ) {
-    if (earnTokenName === 'TOMB') {
+    if (earnTokenName === '3OMB') {
       if (!contractName.endsWith('TombRewardPool')) {
         const rewardPerSecond = await poolContract.tombPerSecond();
-        if (depositTokenName === 'WFTM') {
-          return rewardPerSecond.mul(6000).div(11000).div(24);
-        } else if (depositTokenName === 'BOO') {
-          return rewardPerSecond.mul(2500).div(11000).div(24);
-        } else if (depositTokenName === 'ZOO') {
-          return rewardPerSecond.mul(1000).div(11000).div(24);
-        } else if (depositTokenName === 'SHIBA') {
-          return rewardPerSecond.mul(1500).div(11000).div(24);
+        if (depositTokenName === '2SHARES') {
+          return rewardPerSecond.mul(7500).div(25000).div(24).mul(20);
+        } else if (depositTokenName === '2OMB') {
+          return rewardPerSecond.mul(5000).div(25000).div(24).mul(20);
+        } else if (depositTokenName === 'BELUGA') {
+          return rewardPerSecond.mul(1000).div(25000).div(24).mul(20);
+        } else if (depositTokenName === 'BIFI') {
+          return rewardPerSecond.mul(1000).div(25000).div(24).mul(20);
+        } else if (depositTokenName === 'WFTM') {
+          return rewardPerSecond.mul(1000).div(25000).div(24).mul(20);
+        } else if (depositTokenName === 'MIM') {
+          return rewardPerSecond.mul(1000).div(25000).div(24).mul(20);
         }
         return rewardPerSecond.div(24);
       }
@@ -408,7 +412,7 @@ export class TombFinance {
   ): Promise<BigNumber> {
     const pool = this.contracts[poolName];
     try {
-      if (earnTokenName === 'TOMB') {
+      if (earnTokenName === '3OMB') {
         return await pool.pendingTOMB(poolId, account);
       } else {
         return await pool.pendingShare(poolId, account);
