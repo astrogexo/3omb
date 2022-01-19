@@ -35,6 +35,7 @@ const logosBySymbol: { [title: string]: string } = {
   BELUGA: belugaLogo,
   BIFI: bifiLogo,
   MIM: mimLogo,
+  'wFTM': wftmLogo,
   '2OMB': twoombLogo,
   '2SHARES': twoshareLogo,
   'TOMB-FTM-LP': tombFtmLpLogo,

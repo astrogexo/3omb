@@ -39,6 +39,9 @@ const CemeteryCard = ({ bank }) => {
           </Box>
         </CardContent>
         <CardActions style={{ justifyContent: 'flex-end' }}>
+        <Button color="primary" size="small" variant="contained" target="_blank" href={`${bank.buyLink}`}>
+            Buy
+          </Button>
           <Button color="primary" size="small" variant="contained" component={Link} to={`/farms/${bank.contract}`}>
             Stake
           </Button>
