@@ -119,9 +119,9 @@ const Nav = () => {
               {/* <Link color="textPrimary" to="/treasury" className={classes.link}>
                 Treasury
               </Link> */}
-              <a href="/" target="_blank" className={classes.link}>
+              {/* <a href="/" target="_blank" className={classes.link}>
                 Vaults
-              </a>
+              </a> */}
               {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
                 SBS
               </Link>
