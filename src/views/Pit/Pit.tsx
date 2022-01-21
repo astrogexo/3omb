@@ -28,6 +28,7 @@ const BackgroundImage = createGlobalStyle`
 }
 
 * {
+    background: transparent;
     border-radius: 0 !important;
     box-shadow: none !important;
 }
@@ -131,6 +132,7 @@ const Pit: React.FC = () => {
 
 const StyledBond = styled.div`
   display: flex;
+  background: transparent;
   @media (max-width: 768px) {
     width: 100%;
     flex-flow: column nowrap;
@@ -141,6 +143,7 @@ const StyledBond = styled.div`
 const StyledCardWrapper = styled.div`
   display: flex;
   flex: 1;
+  background: transparent;
   flex-direction: column;
   @media (max-width: 768px) {
     width: 80%;
@@ -151,6 +154,7 @@ const StyledStatsWrapper = styled.div`
   display: flex;
   flex: 0.8;
   margin: 0 20px;
+  background: transparent;
   flex-direction: column;
 
   @media (max-width: 768px) {

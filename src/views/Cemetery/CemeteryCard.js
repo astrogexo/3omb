@@ -40,7 +40,7 @@ const CemeteryCard = ({ bank }) => {
         </CardContent>
         <CardActions style={{ justifyContent: 'flex-end' }}>
         <Button color="primary" size="small" variant="contained" target="_blank" href={`${bank.site}`}>
-          Site
+          ↗
         </Button>
         <Button color="primary" size="small" variant="contained" target="_blank" href={`${bank.buyLink}`}>
             Buy
