@@ -313,7 +313,7 @@ export class TombFinance {
   async getDepositTokenPriceInDollars(tokenName: string, token: ERC20) {
     let tokenPrice;
     const priceOfOneFtmInDollars = await this.getWFTMPriceFromPancakeswap();
-    if (tokenName === 'WFTM') {
+    if (tokenName === 'wFTM') {
       tokenPrice = priceOfOneFtmInDollars;
     } else {
       if (tokenName === 'TOMB-FTM-LP') {

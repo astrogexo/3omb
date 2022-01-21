@@ -114,7 +114,7 @@ const Nav = () => {
                 3Bonds
               </Link>
               <Link color="textPrimary" to="/rebates" className={classes.link}>
-                3Rebates
+                3DAO
               </Link>
               <Link color="textPrimary" to="/treasury" className={classes.link}>
                 Treasury

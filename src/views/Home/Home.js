@@ -152,11 +152,11 @@ const Home = () => {
             <Box p={4}>
               <h2>Welcome to 3omb Finance</h2>
               <p>An algorithmic stablecoin on the Fantom Opera blockchain, pegged to the price of 1 FTM</p>
-              <p>3omb utilizes DAO mechanisms as well as seigniorage.</p>
+              <p>3omb utilizes multiple bonding mechanisms at the <StyledLink href="/rebates">3DAO</StyledLink> as well as seigniorage.</p>
               <p>Built on top of <StyledLink target="_blank" href="https://2omb.finance">2omb.finance</StyledLink>, and forked from <StyledLink target="_blank" href="https://tomb.finance">tomb.finance</StyledLink></p>
               <p>
-                Stake your 3OMB-WFTM LP in the <StyledLink target="_blank" href="/farms">3FARMS</StyledLink> to earn 3SHARES rewards.
-                Then stake your earned 3SHARES in the <StyledLink target="_blank" href="/boardroom">3ROOM</StyledLink> to maximize profits!
+                Stake your 3OMB-WFTM LP in the <StyledLink href="/farms">3Farms</StyledLink> to earn 3SHARES rewards.
+                Then stake your earned 3SHARES in the <StyledLink href="/boardroom">3Room</StyledLink> to maximize profits!
               </p>
             </Box>
           </Paper>
@@ -213,7 +213,46 @@ const Home = () => {
         </Grid>
 
         {/* TOMB */}
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={3}>
+          <Card style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
+            <CardContent align="center" style={{ position: 'relative' }}>
+              <h2>FTM</h2>
+              {/* <Button
+                onClick={() => {
+                  tombFinance.watchAssetInMetamask('TOMB');
+                }}
+                color="secondary"
+                variant="outlined"
+                style={{ position: 'absolute', top: '10px', right: '10px', borderColor: "var(--accent-light)" }}
+              >
+                +&nbsp;
+                <img alt="metamask fox" style={{ width: '20px' }} src={MetamaskFox} />
+              </Button> */}
+              <Box mt={2} style={{ backgroundColor: "transparent !important" }}>
+                <CardIcon style={{ backgroundColor: "transparent !important" }}>
+                  <TokenSymbol symbol="wFTM" style={{ backgroundColor: "transparent !important" }} />
+                </CardIcon>
+              </Box>
+              Current Price
+              <Box>
+                <span style={{ fontSize: '30px' }}>{tombPriceInFTM ? tombPriceInFTM : '-.----'} FTM</span>
+              </Box>
+              <Box>
+                <span style={{ fontSize: '16px', alignContent: 'flex-start' }}>
+                  ${tombPriceInDollars ? tombPriceInDollars : '-.--'}
+                </span>
+              </Box>
+              <span style={{ fontSize: '12px' }}>
+                Market Cap: ${(tombCirculatingSupply * tombPriceInDollars).toFixed(2)} <br />
+                Circulating Supply: {tombCirculatingSupply} <br />
+                Total Supply: {tombTotalSupply}
+              </span>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        {/* TOMB */}
+        <Grid item xs={12} sm={3}>
           <Card style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
             <CardContent align="center" style={{ position: 'relative' }}>
               <h2>3OMB</h2>
@@ -252,7 +291,7 @@ const Home = () => {
         </Grid>
 
         {/* TSHARE */}
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={3}>
           <Card style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
             <CardContent align="center" style={{ position: 'relative' }}>
               <h2>3SHARES</h2>
@@ -289,7 +328,7 @@ const Home = () => {
         </Grid>
 
         {/* TBOND */}
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={3}>
           <Card style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
             <CardContent align="center" style={{ position: 'relative' }}>
               <h2>3BOND</h2>

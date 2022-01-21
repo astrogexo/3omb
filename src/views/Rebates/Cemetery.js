@@ -60,7 +60,7 @@ const Cemetery = () => {
           {!!account ? (
             <>
               <Typography color="textPrimary" align="center" variant="h3" gutterBottom style={{ marginBottom: '40px' }}>
-                3Rebates
+                3DAO - Rebates
               </Typography>
               <Box mt={2}>
                 <Grid container justify="center" spacing={3}>
