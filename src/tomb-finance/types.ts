@@ -10,6 +10,7 @@ export interface BankInfo {
   depositTokenName: ContractName;
   earnTokenName: ContractName;
   sort: number;
+  site: string;
   multiplier: string;
   buyLink: string;
   finished: boolean;

@@ -16,7 +16,7 @@ const StyledCardIcon = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
-  box-shadow: none;
+  box-shadow: none !important;
   margin: 0 auto ${(props) => props.theme.spacing[3]}px;
 `;
 

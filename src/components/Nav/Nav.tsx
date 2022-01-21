@@ -116,9 +116,9 @@ const Nav = () => {
               <Link color="textPrimary" to="/rebates" className={classes.link}>
                 3DAO
               </Link>
-              <Link color="textPrimary" to="/treasury" className={classes.link}>
+              {/* <Link color="textPrimary" to="/treasury" className={classes.link}>
                 Treasury
-              </Link>
+              </Link> */}
               <a href="/" target="_blank" className={classes.link}>
                 Vaults
               </a>
@@ -136,6 +136,9 @@ const Nav = () => {
               </a>
               <a href="https://docs.tomb.finance" target="_blank" className={classes.link}>
                 Docs
+              </a>
+              <a href="https://2omb.finance" target="_blank" className={classes.link}>
+                2omb
               </a>
             </Box>
             <AccountButton text="Connect" />

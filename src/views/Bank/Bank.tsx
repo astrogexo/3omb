@@ -17,7 +17,6 @@ import useStatsForPool from '../../hooks/useStatsForPool';
 import useRedeem from '../../hooks/useRedeem';
 import { Bank as BankEntity } from '../../tomb-finance';
 import useTombFinance from '../../hooks/useTombFinance';
-
 const useStyles = makeStyles((theme) => ({
   gridItem: {
     height: '100%',
@@ -47,7 +46,7 @@ const Bank: React.FC = () => {
         <Grid container justify="center" spacing={3} style={{ marginBottom: '50px' }}>
           <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
             <Card className={classes.gridItem}>
-              <CardContent style={{ textAlign: 'center' }}>
+              <CardContent style={{ textAlign: 'center', boxShadow: 'none !important' }}>
                 <Typography>APR</Typography>
                 <Typography>{bank.closedForStaking ? '0.00' : statsOnPool?.yearlyAPR}%</Typography>
               </CardContent>

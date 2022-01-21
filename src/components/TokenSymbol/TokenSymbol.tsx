@@ -1,11 +1,11 @@
 import React from 'react';
 
 //Graveyard ecosystem logos
-import tombLogo from '../../assets/img/crypto_tomb_cash.svg';
-import tShareLogo from '../../assets/img/crypto_tomb_share.svg';
-import tombLogoPNG from '../../assets/img/crypto_tomb_cash.f2b44ef4.png';
-import tShareLogoPNG from '../../assets/img/crypto_tomb_share.bf1a6c52.png';
-import tBondLogo from '../../assets/img/crypto_tomb_bond.svg';
+import tombLogo from '../../assets/img/3OMB.svg';
+import tShareLogo from '../../assets/img/3SHARES.svg';
+import tombLogoPNG from '../../assets/img/3OMB.png';
+import tShareLogoPNG from '../../assets/img/3SHARES.png';
+import tBondLogo from '../../assets/img/3BOND-01.png';
 
 import tombFtmLpLogo from '../../assets/img/tomb_ftm_lp.png';
 import tshareFtmLpLogo from '../../assets/img/tshare_ftm_lp.png';

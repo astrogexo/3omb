@@ -91,7 +91,7 @@ const Stake: React.FC<StakeProps> = ({ bank }) => {
   );
 
   return (
-    <Card>
+    <Card style={{ boxShadow: 'none !important'}}>
       <CardContent>
         <StyledCardContentInner>
           <StyledCardHeader>
