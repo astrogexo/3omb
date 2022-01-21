@@ -56,7 +56,7 @@ const Home = () => {
   const tShareStats = usetShareStats();
   const tBondStats = useBondStats();
   const tombFinance = useTombFinance();
-  const { price: ftmPrice, marketCap: ftmMarketCap } = useFantomPrice();
+  const { price: ftmPrice, marketCap: ftmMarketCap, priceChange: ftmPriceChange } = useFantomPrice();
 
   let tomb;
   let tShare;
@@ -229,8 +229,8 @@ const Home = () => {
                 <span style={{ fontSize: '30px' }}>${ftmPrice ? ftmPrice : '-.----'} USD</span>
               </Box>
               <span style={{ fontSize: '12px' }}>
-                Market Cap: ${(ftmMarketCap)} <br />
-                <br />
+                Market Cap: ${ftmMarketCap} <br />
+                Price Change 24h: {ftmPriceChange.toFixed(2)}% <br />
                 <br />
                 <br />
               </span>
