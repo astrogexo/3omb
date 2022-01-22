@@ -134,7 +134,7 @@ const Nav = () => {
               <a href="https://snapshot.org/#/forgiving.forg.eth" target="_blank" className={classes.link}>
                 Governance
               </a>
-              <a href="https://docs.tomb.finance" target="_blank" className={classes.link}>
+              <a href="https://docs.2omb.finance" target="_blank" className={classes.link}>
                 Docs
               </a>
               <a href="https://2omb.finance" target="_blank" className={classes.link}>
@@ -177,13 +177,13 @@ const Nav = () => {
               <Divider />
               <List>
                 <ListItemLink primary="Home" to="/" />
-                <ListItemLink primary="Cemetery" to="/cemetery" />
-                <ListItemLink primary="Masonry" to="/masonry" />
+                <ListItemLink primary="Cemetery" to="/farms" />
+                {/* <ListItemLink primary="Masonry" to="/masonry" />
                 <ListItemLink primary="Pit" to="/pit" />
                 <ListItemLink primary="SBS" to="/sbs" />
                 <ListItemLink primary="Liquidity" to="/liquidity" />
-                <ListItemLink primary="Regulations" to="/regulations" />
-                <ListItem button component="a" href="https://docs.tomb.finance">
+                <ListItemLink primary="Regulations" to="/regulations" /> */}
+                <ListItem button component="a" href="https://docs.2omb.finance">
                   <ListItemText>Docs</ListItemText>
                 </ListItem>
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
