@@ -230,6 +230,7 @@ export class TombFinance {
     const depositToken = bank.depositToken;
     const poolContract = this.contracts[bank.contract];
     const depositTokenPrice = await this.getDepositTokenPriceInDollars(bank.depositTokenName, depositToken);
+    console.log("deposit token price:", depositTokenPrice)
     const stakeInPool = await depositToken.balanceOf(bank.address);
     const TVL = Number(depositTokenPrice) * Number(getDisplayBalance(stakeInPool, depositToken.decimal));
     const stat = bank.earnTokenName === '3OMB' ? await this.getTombStat() : await this.getShareStat();
@@ -276,13 +277,17 @@ export class TombFinance {
         } else if (depositTokenName === '2OMB') {
           return rewardPerSecond.mul(5000).div(25000).div(24).mul(20);
         } else if (depositTokenName === 'BELUGA') {
-          return rewardPerSecond.mul(1000).div(25000).div(24).mul(20);
+          return rewardPerSecond.mul(500).div(25000).div(24).mul(20);
         } else if (depositTokenName === 'BIFI') {
-          return rewardPerSecond.mul(1000).div(25000).div(24).mul(20);
+          return rewardPerSecond.mul(500).div(25000).div(24).mul(20);
         } else if (depositTokenName === 'WFTM') {
-          return rewardPerSecond.mul(1000).div(25000).div(24).mul(20);
-        } else if (depositTokenName === 'MIM') {
-          return rewardPerSecond.mul(1000).div(25000).div(24).mul(20);
+          return rewardPerSecond.mul(500).div(25000).div(24).mul(20);
+        } else if (depositTokenName === '2OMB-WFTM LP') {
+          return rewardPerSecond.mul(6000).div(25000).div(24).mul(20);
+        } else if (depositTokenName === '2SHARES-WFTM LP') {
+          return rewardPerSecond.mul(6000).div(25000).div(24).mul(20);
+        } else if (depositTokenName === 'BLOOM') {
+          return rewardPerSecond.mul(500).div(25000).div(24).mul(20);
         }
         return rewardPerSecond.div(24);
       }
@@ -295,7 +300,7 @@ export class TombFinance {
       return await poolContract.epochTombPerSecond(0);
     }
     const rewardPerSecond = await poolContract.tSharePerSecond();
-    if (depositTokenName.startsWith('TOMB')) {
+    if (depositTokenName.startsWith('3OMB')) {
       return rewardPerSecond.mul(35500).div(59500);
     } else {
       return rewardPerSecond.mul(24000).div(59500);
@@ -316,12 +321,20 @@ export class TombFinance {
     if (tokenName === 'wFTM') {
       tokenPrice = priceOfOneFtmInDollars;
     } else {
+      console.log("token name:", tokenName)
       if (tokenName === 'TOMB-FTM-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TOMB, true);
       } else if (tokenName === 'TSHARE-FTM-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TSHARE, false);
-      } else if (tokenName === 'SHIBA') {
+      } else if (tokenName === "2SHARES-WFTM LP") {
+        tokenPrice = await this.getLPTokenPrice(token, new ERC20("0xc54a1684fd1bef1f077a336e6be4bd9a3096a6ca", this.provider, "2SHARES"), false);
+      } else if (tokenName === "2OMB-WFTM LP") {
+        tokenPrice = await this.getLPTokenPrice(token, new ERC20("0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae", this.provider, "2OMB"), false);
+      } else if (tokenName === 'BLOOM') {
         tokenPrice = await this.getTokenPriceFromSpiritswap(token);
+      } else if (tokenName === "BELUGA") {
+        const data = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=beluga-fi&vs_currencies=usd").then(res => res.json())
+        tokenPrice = data["beluga-fi"].usd
       } else {
         tokenPrice = await this.getTokenPriceFromPancakeswap(token);
         tokenPrice = (Number(tokenPrice) * Number(priceOfOneFtmInDollars)).toString();

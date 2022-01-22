@@ -33,9 +33,10 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     color: 'var(--white)',
-    'background-color': 'transparent',
+    'background-color': '#ff494922',
+    'backdrop-filter': "blur(2px)",
     // borderBottom: `1px solid ${theme.palette.divider}`,
-    padding: '10px',
+    padding: '0 10px',
     marginBottom: '3rem',
   },
   drawer: {
