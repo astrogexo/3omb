@@ -22,6 +22,7 @@ const configurations: { [env: string]: Configuration } = {
       BLOOM: ['0x9B2e37cDC711CfcAC1E1482B5741c74dd3924199', 18],
       'wFTM': ['0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83', 18],
       '2OMB': ['0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae', 18],
+      '2OMB-2SHARES LP': ['0xd9B5f00d183df52D717046521152303129F088DD', 18],
       '2OMB-WFTM LP': ['0xbdC7DFb7B88183e87f003ca6B5a2F81202343478',18],
       '2SHARES-WFTM LP': ['0x6398ACBBAB2561553a9e458Ab67dCFbD58944e52',18],
       '2SHARES': ['0xc54a1684fd1bef1f077a336e6be4bd9a3096a6ca', 18],
@@ -79,6 +80,20 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     sort: 1,
     closedForStaking: false,
   },
+  // Tomb2shares2ombLPRewardPool: {
+  //   name: 'Earn 3OMB by staking 2OMB-2SHARES LP',
+  //   poolId: 2,
+  //   sectionInUI: 0,
+  //   contract: 'Tomb2Shares2ombLPRewardPool',
+  //   depositTokenName: '2OMB-2SHARES LP',
+  //   earnTokenName: '3OMB',
+  //   finished: false,
+  //   multiplier: '6000',
+  //   site: "https://2omb.finance",
+  //   buyLink: 'https://spookyswap.finance/add/0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae/0xc54A1684fD1bef1f077a336E6be4Bd9a3096a6Ca',
+  //   sort: 2,
+  //   closedForStaking: false,
+  // },
   Tomb2ombWftmLPRewardPool: {
     name: 'Earn 3OMB by staking 2OMB-WFTM LP',
     poolId: 2,
@@ -90,7 +105,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     multiplier: '6000',
     site: "https://2omb.finance",
     buyLink: 'https://spookyswap.finance/add/FTM/0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae',
-    sort: 2,
+    sort: 3,
     closedForStaking: false,
   },
   Tomb2ombRewardPool: {
@@ -104,7 +119,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     multiplier: '5000',
     site: 'https://2omb.finance',
     buyLink: 'https://spookyswap.finance/swap?outputCurrency=0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae',
-    sort: 3,
+    sort: 4,
     closedForStaking: false,
   },
   TombBelugaRewardPool: {
@@ -118,7 +133,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     multiplier: '500',
     site: 'https://beluga.fi',
     buyLink: 'https://beets.fi/#/trade/0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83/0x4A13a2cf881f5378DEF61E430139Ed26d843Df9A',
-    sort: 4,
+    sort: 5,
     closedForStaking: false,
   },
   TombBifiRewardPool: {
@@ -132,7 +147,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     multiplier: '500',
     site: 'https://app.beefy.finance/#/fantom',
     buyLink: 'https://beets.fi/#/trade/0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83/0xd6070ae98b8069de6B494332d1A1a81B6179D960',
-    sort: 5,
+    sort: 6,
     closedForStaking: false,
   },
   TombWrappedFtmRewardPool: {
@@ -146,7 +161,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     multiplier: '500',
     site: 'https://fantom.foundation',
     buyLink: 'https://ecoswap.exchange',
-    sort: 6,
+    sort: 7,
     closedForStaking: false,
   },
   TombMimRewardPool: {
@@ -160,7 +175,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     multiplier: '500',
     site: 'https://abracadabra.money/',
     buyLink: 'https://ftm.curve.fi/factory/7',
-    sort: 7,
+    sort: 8,
     closedForStaking: false,
   },
   TombBloomRewardPool: {
@@ -174,7 +189,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     multiplier: '500',
     site: 'https://bloom.thetulipdao.com/',
     buyLink: 'https://swap.spiritswap.finance/#/exchange/swap/FTM/0x9B2e37cDC711CfcAC1E1482B5741c74dd3924199',
-    sort: 8,
+    sort: 9,
     closedForStaking: false,
   },
   TombFtmLPTombRewardPool: {

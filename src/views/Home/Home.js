@@ -201,7 +201,6 @@ const Home = () => {
                 Farm Now
               </Button> */}
               <Button
-                color="primary"
                 target="_blank"
                 href={buyTombAddress}
                 variant="contained"
@@ -210,8 +209,14 @@ const Home = () => {
               >
                 Buy 3OMB
               </Button>
-              <Button variant="contained" target="_blank" href={buyTShareAddress} className={classes.button}>
+              <Button variant="contained" target="_blank" href={buyTShareAddress} style={{ marginRight: '10px' }} className={classes.button}>
                 Buy 3SHARES
+              </Button>
+              <Button variant="contained" target="_blank" href="https://dexscreener.com/fantom/" style={{ marginRight: '10px' }} className={classes.button}>
+                3OMB Chart
+              </Button>
+              <Button variant="contained" target="_blank" href="https://dexscreener.com/fantom/" className={classes.button}>
+                3SHARES Chart
               </Button>
             </CardContent>
           </Card>

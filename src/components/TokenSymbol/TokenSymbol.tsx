@@ -22,6 +22,7 @@ import mimLogo from '../../assets/img/mimlogopng.png';
 import bloomLogo from '../../assets/img/BLOOM.jpg';
 import TwoombLPLogo from '../../assets/img/2OMB-WFTM.png';
 import TwosharesLPLogo from '../../assets/img/2SHARES-WFTM.png';
+import TwoombTwosharesLPLogo from '../../assets/img/2OMB-2SHARES.png';
 
 const logosBySymbol: { [title: string]: string } = {
   //Real tokens
@@ -41,6 +42,7 @@ const logosBySymbol: { [title: string]: string } = {
   BLOOM: bloomLogo,
   '2OMB-WFTM LP': TwoombLPLogo,
   '2SHARES-WFTM LP': TwosharesLPLogo,
+  '2OMB-2SHARES LP': TwoombTwosharesLPLogo,
   'wFTM': wftmLogo,
   '2OMB': twoombLogo,
   '2SHARES': twoshareLogo,
