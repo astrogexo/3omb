@@ -19,6 +19,9 @@ import zooLogo from '../../assets/img/zoo_logo.svg';
 import shibaLogo from '../../assets/img/shiba_logo.svg';
 import bifiLogo from '../../assets/img/COW.svg';
 import mimLogo from '../../assets/img/mimlogopng.png';
+import bloomLogo from '../../assets/img/BLOOM.jpg';
+import TwoombLPLogo from '../../assets/img/2OMB-WFTM.png';
+import TwosharesLPLogo from '../../assets/img/2SHARES-WFTM.png';
 
 const logosBySymbol: { [title: string]: string } = {
   //Real tokens
@@ -35,6 +38,9 @@ const logosBySymbol: { [title: string]: string } = {
   BELUGA: belugaLogo,
   BIFI: bifiLogo,
   MIM: mimLogo,
+  BLOOM: bloomLogo,
+  '2OMB-WFTM LP': TwoombLPLogo,
+  '2SHARES-WFTM LP': TwosharesLPLogo,
   'wFTM': wftmLogo,
   '2OMB': twoombLogo,
   '2SHARES': twoshareLogo,
