@@ -31,7 +31,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   // background-color: ${(props) => props.theme.color.grey[!props.disabled ? 700 : 900]};
   background-color: ${(props) => (!props.disabled ? '#FF4949' : props.theme.color.grey[900])};
   border: 0;
-  border-radius: 28px;
+  border-radius: 10px !important;
   color: ${(props) => (!props.disabled ? props.theme.color.primary.main : props.theme.color.grey[500])};
   cursor: pointer;
   display: flex;
@@ -47,7 +47,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   width: 56px;
   &:hover {
     // background-color: ${(props) => props.theme.color.grey[800]};
-    background-color: #FF4949;
+    background-color: #ff6464;
   }
 `;
 

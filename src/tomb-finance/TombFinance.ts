@@ -329,7 +329,7 @@ export class TombFinance {
       } else if (tokenName === "2SHARES-WFTM LP") {
         tokenPrice = await this.getLPTokenPrice(token, new ERC20("0xc54a1684fd1bef1f077a336e6be4bd9a3096a6ca", this.provider, "2SHARES"), false);
       } else if (tokenName === "2OMB-WFTM LP") {
-        tokenPrice = await this.getLPTokenPrice(token, new ERC20("0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae", this.provider, "2OMB"), false);
+        tokenPrice = await this.getLPTokenPrice(token, new ERC20("0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae", this.provider, "2OMB"), true);
       } else if (tokenName === 'BLOOM') {
         tokenPrice = await this.getTokenPriceFromSpiritswap(token);
       } else if (tokenName === "BELUGA") {
@@ -409,12 +409,20 @@ export class TombFinance {
     const totalSupply = getFullDisplayBalance(await lpToken.totalSupply(), lpToken.decimal);
     //Get amount of tokenA
     const tokenSupply = getFullDisplayBalance(await token.balanceOf(lpToken.address), token.decimal);
-    const stat = isTomb === true ? await this.getTombStat() : await this.getShareStat();
+    const stat = isTomb === true ? await this.getTombStatFake() : await this.getShareStatFake();
     const priceOfToken = stat.priceInDollars;
     const tokenInLP = Number(tokenSupply) / Number(totalSupply);
     const tokenPrice = (Number(priceOfToken) * tokenInLP * 2) //We multiply by 2 since half the price of the lp token is the price of each piece of the pair. So twice gives the total
       .toString();
     return tokenPrice;
+  }
+
+  async getTombStatFake() {
+    return { priceInDollars: 10 }
+  }
+
+  async getShareStatFake() {
+    return { priceInDollars: 1700 }
   }
 
   async earnedFromBank(
