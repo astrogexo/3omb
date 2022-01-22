@@ -152,13 +152,13 @@ const Home = () => {
         <Grid item xs={12} sm={8}>
           <Paper style={{ backgroundColor: "transparent", boxShadow: "none", border: "1px solid var(--white)" }}>
             <Box p={4}>
-              <h2>Welcome to 3omb Finance</h2>
+              <h2>Welcome to 3omb Finance!</h2>
               <p>An algorithmic stablecoin on the Fantom Opera blockchain, pegged to the price of 1 FTM</p>
-              <p>3omb utilizes multiple bonding mechanisms at the <StyledLink href="/rebates">3DAO</StyledLink> as well as seigniorage.</p>
-              <p>Built on top of <StyledLink target="_blank" href="https://2omb.finance">2omb.finance</StyledLink>, and forked from <StyledLink target="_blank" href="https://tomb.finance">tomb.finance</StyledLink></p>
+              <p>3omb utilizes multiple bonding mechanisms at the <StyledLink href="/">3DAO</StyledLink> as well as seigniorage.</p>
+              <p>Built on top of <StyledLink target="_blank" href="https://2omb.finance">2omb.finance</StyledLink>, and forked from <StyledLink target="_blank" href="https://tomb.finance">tomb.finance</StyledLink>.</p>
               <p>
                 Stake your 3OMB-WFTM LP in the <StyledLink href="/farms">3Farms</StyledLink> to earn 3SHARES rewards.
-                Then stake your earned 3SHARES in the <StyledLink href="/boardroom">3Room</StyledLink> to maximize profits!
+                Then stake your earned 3SHARES in the <StyledLink href="/">3Room</StyledLink> to maximize profits!
               </p>
             </Box>
           </Paper>
@@ -208,10 +208,10 @@ const Home = () => {
                 style={{ marginRight: '10px' }}
                 className={classes.button}
               >
-                Buy TOMB
+                Buy 3OMB
               </Button>
               <Button variant="contained" target="_blank" href={buyTShareAddress} className={classes.button}>
-                Buy TSHARE
+                Buy 3SHARES
               </Button>
             </CardContent>
           </Card>
