@@ -67,7 +67,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   Tomb2sharesWftmLPRewardPool: {
     name: 'Earn 3OMB by staking 2SHARES-WFTM LP',
-    poolId: 0,
+    poolId: 1,
     sectionInUI: 0,
     contract: 'Tomb2SharesWftmLPRewardPool',
     depositTokenName: '2SHARES-WFTM LP',
@@ -81,7 +81,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   Tomb2ombWftmLPRewardPool: {
     name: 'Earn 3OMB by staking 2OMB-WFTM LP',
-    poolId: 0,
+    poolId: 2,
     sectionInUI: 0,
     contract: 'Tomb2ombWftmLPRewardPool',
     depositTokenName: '2OMB-WFTM LP',
@@ -95,7 +95,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   Tomb2ombRewardPool: {
     name: 'Earn 3OMB by staking 2OMB',
-    poolId: 0,
+    poolId: 3,
     sectionInUI: 0,
     contract: 'Tomb2ombRewardPool',
     depositTokenName: '2OMB',
@@ -109,7 +109,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   TombBelugaRewardPool: {
     name: 'Earn 3OMB by staking BELUGA',
-    poolId: 0,
+    poolId: 4,
     sectionInUI: 0,
     contract: 'TombBelugaRewardPool',
     depositTokenName: 'BELUGA',
@@ -123,7 +123,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   TombBifiRewardPool: {
     name: 'Earn 3OMB by staking BIFI',
-    poolId: 1,
+    poolId: 5,
     sectionInUI: 0,
     contract: 'TombBifiGenesisRewardPool',
     depositTokenName: 'BIFI',
@@ -137,7 +137,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   TombWrappedFtmRewardPool: {
     name: 'Earn 3OMB by staking WFTM',
-    poolId: 2,
+    poolId: 6,
     sectionInUI: 0,
     contract: 'TombWrappedFtmRewardPool',
     depositTokenName: 'wFTM',
@@ -151,7 +151,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   TombMimRewardPool: {
     name: 'Earn 3OMB by staking MIM',
-    poolId: 3,
+    poolId: 7,
     sectionInUI: 0,
     contract: 'TombMimGenesisRewardPool',
     depositTokenName: 'MIM',
@@ -165,7 +165,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   TombBloomRewardPool: {
     name: 'Earn 3OMB by staking BLOOM',
-    poolId: 3,
+    poolId: 8,
     sectionInUI: 0,
     contract: 'TombBloomGenesisRewardPool',
     depositTokenName: 'BLOOM',
